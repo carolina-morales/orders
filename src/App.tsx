@@ -1,11 +1,17 @@
 import React from 'react';
-import './App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { theme } from './utils/theme';
+import Orders from './pages/orders';
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <ThemeProvider theme={theme}>
+      <Orders />
+      <ToastContainer theme='colored' />
+      <CssBaseline />
+    </ThemeProvider>
   );
 }
 
